@@ -257,3 +257,14 @@
 .logo{
   width:140px;
 }
+.suite-card{
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.suite-card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
