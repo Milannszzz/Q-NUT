@@ -300,3 +300,25 @@
   color: #ff7a00;
   font-weight: bold;
 }
+.menu-nav{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:40px 0;
+}
+
+.menu-nav a{
+  padding:12px 20px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.menu-nav a:hover{
+  background:#ff7a00;
+  color:black;
+}
