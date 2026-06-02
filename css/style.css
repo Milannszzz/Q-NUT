@@ -322,3 +322,6 @@
   background:#ff7a00;
   color:black;
 }
+html {
+  scroll-behavior: smooth;
+}
