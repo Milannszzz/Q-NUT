@@ -383,3 +383,34 @@ html {
 .whatsapp-float::before{
     background:#d4af37;
 }
+.whatsapp-float{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+
+    padding: 10px 14px;
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 9999;
+
+    transition: all .3s ease;
+}
+
+.whatsapp-float:hover{
+    transform: translateY(-2px);
+}
+
+.whatsapp-float span:first-child{
+    font-size: 18px;
+}
