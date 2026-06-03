@@ -15,26 +15,283 @@
 <body>
 
 
-<!-- NAVBAR -->
+<!-- NAV -->
+<nav class="premium-nav">
 
-<header>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="suites.html">Suites</a>
+    <a href="menu.html">Dining</a>
+  </div>
 
-  <nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/images/logo 2.png" alt="Q-NUTS Logo">
+    </a>
+  </div>
 
-    <img src="assets/images/logo 2.png" class="logo">
+  <div class="nav-right">
+    <a href="gallery.html">Gallery</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <ul>
+</nav>
 
-      <li><a href="index.html">Home</a></li>
-      <li><a href="suites.html">Suites</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+
+<!-- ROOM HEADER -->
+
+<section class="room-header">
+
+  <h1>Standard Room</h1>
+
+  <div class="room-divider"></div>
+
+</section>
+
+
+<!-- ROOM SLIDER -->
+
+<section class="room-slider">
+
+  <div class="slider-container">
+
+    <div class="slides fade">
+      <img src="assets/images/standard room.jpg">
+    </div>
+
+    <div class="slides fade">
+      <img src="assets/images/standard room bathroom1.jpg">
+    </div>
+
+    <div class="slides fade">
+      <img src="assets/images/standard room toilet1.jpg">
+    </div>
+
+    <div class="slides fade">
+      <img src="assets/images/standard room2.jpg">
+    </div>
+
+    <div class="slides fade">
+      <img src="assets/images/standard room3.jpg">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+</section>
+
+
+
+<section class="room-overview">
+
+  <!-- LEFT -->
+
+  <div class="room-info-box">
+
+    <h2>Standard Room</h2>
+
+    <p class="room-description">
+Experience elevated comfort with additional space, premium furnishings and a relaxing atmosphere perfect for business and leisure travelers.
+</p>
+
+    <ul class="room-specs">
+
+      <li><strong>Room Size:</strong> 20m²</li>
+
+      <li><strong>Bed:</strong> Queen Size Bed</li>
+
+      <li><strong>Occupancy:</strong> 2 Guests</li>
+
+      <li><strong>Bathroom:</strong> Luxury Bathroom</li>
+
+      <li><strong>Power:</strong> 24/7 Electricity</li>
 
     </ul>
 
-  </nav>
+    <a
+      href="https://wa.me/2349169882866?text=Hi%20I%20want%20to%20book%20the%20Single%20Room"
+      class="book-room-btn">
 
+      BOOK THIS ROOM
+
+    </a>
+
+  </div>
+
+
+  <!-- RIGHT -->
+
+  <div class="features-box">
+
+    <h3>ROOM FEATURES</h3>
+
+    <ul>
+
+      <li>📶 Free WiFi</li>
+
+      <li>📺 Smart TV</li>
+
+      <li>🏊 Pool Access</li>
+
+      <li>🍽 Restaurant Service</li>
+
+      <li>🚗 Free Parking</li>
+
+      <li>🛎 Room Service</li>
+
+      <li>🍹 Food & Beverage</li>
+
+      <li>🛁 Bath & Swim Features</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- ROOM VIDEO -->
+
+<section class="room-video">
+
+  <h2>Room Walkthrough</h2>
+
+  <video controls>
+
+    <source src="assets/videos/single room.mp4" type="video/mp4">
+
+  </video>
+
+</section>
+
+
+
+<!-- PREMIUM FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT COLUMN -->
+    <div class="footer-column">
+
+      <h3>Explore</h3>
+
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Our Events</a>
+      <a href="suites.html">Our Suites</a>
+      <a href="menu.html">Dining & Bar</a>
+      <a href="contact.html">Contact Us</a>
+
+    </div>
+
+    <!-- CENTER COLUMN -->
+    <div class="footer-column footer-brand">
+
+      <img
+        src="assets/images/logo 2.png"
+        alt="Q-NUTS Logo"
+        class="footer-logo">
+
+      <h3>Q-NUTS Lounge & Suites</h3>
+
+      <p>
+        Premium hospitality, luxury accommodation,
+        nightlife, dining and entertainment in Lagos.
+      </p>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="footer-column">
+
+      <h3>Contact Information</h3>
+
+      <p>📍 Ikeja, Lagos, Nigeria</p>
+
+      <p>📞 +234 916 988 2866</p>
+
+      <p>📧 qnutslounge@gmail.com</p>
+
+      <p>🕒 Open 24 Hours</p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-extra">
+
+    <div class="footer-box">
+
+      <h4>Our Vision</h4>
+
+      <p>
+        To become Lagos' preferred destination for
+        luxury accommodation, nightlife and premium
+        guest experiences.
+      </p>
+
+    </div>
+
+    <div class="footer-box">
+
+      <h4>Our Mission</h4>
+
+      <p>
+        To provide exceptional hospitality, comfort,
+        entertainment and personalized service that
+        creates unforgettable experiences for every guest.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Q-NUTS Lounge & Suites. All Rights Reserved.
+  </div>
+
+</footer>
+
+<script>
+
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+
+  let i;
+
+  let slides =
+  document.getElementsByClassName("slides");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+}
+
+</script>
+</body>
+</html>
 </header>
 
 
@@ -74,15 +331,17 @@
 
     <ul>
 
-      <li>✔ Air Conditioning</li>
-      <li>✔ Smart TV</li>
-      <li>✔ Free WiFi</li>
-      <li>✔ Luxury Bathroom</li>
-      <li>✔ 24/7 Power Supply</li>
-      <li>✔ Room Service</li>
-      <li>✔ Water Heater</li>
+<li>✔ Air Conditioning</li>
+<li>✔ Smart TV</li>
+<li>✔ Free WiFi</li>
+<li>✔ Luxury Bathroom</li>
+<li>✔ 24/7 Power Supply</li>
+<li>✔ Room Service</li>
+<li>✔ Water Heater</li>
+<li>✔ Work Desk</li>
+<li>✔ Complimentary Breakfast</li>
 
-    </ul>
+</ul>
 
   </div>
 
