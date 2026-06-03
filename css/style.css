@@ -799,3 +799,80 @@ html {
   }
 
 }
+/* PREMIUM HOTEL NAVBAR */
+
+.premium-nav{
+    position: sticky;
+    top:0;
+    z-index:1000;
+
+    background:#0f0f0f;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 5%;
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-left,
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex:1;
+}
+
+.nav-right{
+    justify-content:flex-end;
+}
+
+.nav-logo{
+    flex-shrink:0;
+    padding:0 30px;
+}
+
+.nav-logo img{
+    height:75px;
+    width:auto;
+    display:block;
+}
+
+.premium-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.premium-nav a:hover{
+    color:#d4af37;
+}
+@media(max-width:900px){
+
+    .premium-nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-left,
+    .nav-right{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .nav-logo{
+        order:-1;
+        padding:0;
+    }
+
+    .nav-logo img{
+        height:60px;
+    }
+}
