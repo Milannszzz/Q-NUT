@@ -572,3 +572,85 @@ html {
     font-size:1.1rem;
     line-height:1.7;
 }
+.room-hero img{
+  width:100%;
+  height:75vh;
+  object-fit:cover;
+}
+
+.room-details{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.room-details h1{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.room-price{
+  font-size:30px;
+  color:#ff7a00;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.room-description{
+  max-width:700px;
+  margin:auto;
+  color:#ccc;
+  line-height:1.8;
+  font-size:18px;
+}
+
+.amenities{
+  margin-top:50px;
+}
+
+.amenities h2{
+  margin-bottom:25px;
+}
+
+.amenities ul{
+  list-style:none;
+  padding:0;
+}
+
+.amenities li{
+  margin:15px 0;
+  color:#f5f5f5;
+  font-size:18px;
+}
+
+.room-gallery{
+  padding:80px 8%;
+}
+
+.room-gallery h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.room-video{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.room-video video{
+  width:100%;
+  max-width:900px;
+  border-radius:20px;
+}
