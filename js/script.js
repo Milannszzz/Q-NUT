@@ -49,9 +49,6 @@ function updateExploreSuite(){
 document.getElementById("exploreSuiteTitle").innerHTML =
 exploreSuites[exploreIndex].title;
 
-document.getElementById("exploreSuitePrice").innerHTML =
-exploreSuites[exploreIndex].price;
-
 document.getElementById("exploreSuiteDescription").innerHTML =
 exploreSuites[exploreIndex].description;
 
