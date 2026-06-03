@@ -709,3 +709,52 @@ html {
     color:#ccc;
     margin-bottom:25px;
 }
+/* =========================
+   PREMIUM FOOTER
+========================= */
+
+.footer{
+  background:#0a0a0a;
+  padding:70px 8% 25px;
+  border-top:1px solid rgba(212,175,55,.2);
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+.footer-column h3{
+  color:#d4af37;
+  margin-bottom:18px;
+  font-size:1.1rem;
+}
+
+.footer-column p{
+  color:#bbb;
+  line-height:1.8;
+  margin-bottom:10px;
+}
+
+.footer-column a{
+  display:block;
+  color:#bbb;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:.3s;
+}
+
+.footer-column a:hover{
+  color:#d4af37;
+  padding-left:5px;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:50px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#777;
+  font-size:.9rem;
+}
