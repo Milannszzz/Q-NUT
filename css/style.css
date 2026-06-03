@@ -876,3 +876,41 @@ html {
         height:60px;
     }
 }
+/* SUITES HERO */
+
+.suite-hero{
+    position:relative;
+    height:60vh;
+    overflow:hidden;
+}
+
+.suite-hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.suite-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding-left:10%;
+    color:white;
+}
+
+.suite-hero-overlay h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+.suite-hero-overlay p{
+    max-width:600px;
+    font-size:1.1rem;
+    color:#ddd;
+}
