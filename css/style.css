@@ -575,7 +575,7 @@ html {
 .room-hero img{
   width:100%;
   height:75vh;
-  object-fit:cover;
+  object-fit:contain;
 }
 
 .room-details{
@@ -640,7 +640,7 @@ html {
 .gallery-grid img{
   width:100%;
   height:260px;
-  object-fit:cover;
+  object-fit:contain;
   border-radius:20px;
 }
 
