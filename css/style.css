@@ -1226,109 +1226,90 @@ html {
     }
 
 }
-/* ACCOMMODATION SHOWCASE */
-
-.accommodation-showcase{
+.explore-section{
     padding:120px 8%;
 }
 
-.accommodation-text{
-    max-width:900px;
-    margin:0 auto 60px;
+.explore-heading{
     text-align:center;
-    color:#bbb;
-    line-height:1.8;
+    margin-bottom:60px;
 }
 
-.room-slider{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.slider-image{
-    overflow:hidden;
-}
-
-.slider-image img{
-    width:100%;
-    height:650px;
-    object-fit:cover;
-    border-radius:15px;
-
-    transition:opacity .5s ease;
-}
-
-.slider-content{
-    background:#111;
-    padding:50px;
-}
-
-.slider-content h3{
+.explore-heading h2{
     font-size:3rem;
     margin-bottom:15px;
 }
 
-.slider-price{
-    color:#d4af37;
-    font-size:1.3rem;
-    margin-bottom:20px;
+.explore-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#aaa;
 }
 
-.slider-content p{
-    color:#ccc;
-    line-height:1.8;
+.explore-grid{
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+    grid-template-rows:320px 320px;
+
+    gap:20px;
 }
 
-.slider-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:30px;
+.suites-feature{
+    grid-row:span 2;
 }
 
-.slider-nav{
-    margin-top:40px;
-    display:flex;
-    gap:15px;
+.nightlife-feature{
+    grid-column:span 1;
 }
 
-.slider-nav button{
-    width:55px;
-    height:55px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#d4af37;
-    color:#111;
-
-    font-size:22px;
-    cursor:pointer;
-
-    transition:.3s;
+.explore-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
 }
 
-.slider-nav button:hover{
+.explore-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.explore-card:hover img{
     transform:scale(1.08);
 }
 
-.fade{
-    opacity:0;
+.explore-overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.2)
+    );
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:35px;
 }
 
-@media(max-width:900px){
+.explore-overlay h3{
+    color:white;
+    font-size:2rem;
+}
 
-    .room-slider{
-        grid-template-columns:1fr;
-    }
+.explore-overlay p{
+    color:#ddd;
+    margin-top:10px;
+}
 
-    .slider-image img{
-        height:450px;
-    }
-
-    .slider-content{
-        padding:30px;
-    }
-
+.explore-label{
+    color:#d4af37;
+    letter-spacing:2px;
+    font-size:.8rem;
+    margin-bottom:10px;
 }
