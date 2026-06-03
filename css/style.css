@@ -665,3 +665,47 @@ html {
   background:#ff7a00;
   color:#000 !important;
 }
+.about-text{
+    max-width:850px;
+    margin:15px auto;
+    text-align:center;
+    color:#ccc;
+    line-height:1.8;
+}
+
+.amenities-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.amenity-card{
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.amenity-card:hover{
+    transform:translateY(-8px);
+}
+
+.amenity-card span{
+    font-size:40px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.cta-section{
+    text-align:center;
+}
+
+.cta-section h2{
+    margin-bottom:15px;
+}
+
+.cta-section p{
+    color:#ccc;
+    margin-bottom:25px;
+}
