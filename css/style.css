@@ -1313,3 +1313,44 @@ html {
     font-size:.8rem;
     margin-bottom:10px;
 }
+.suite-controls button{
+
+    width:70px;
+    height:70px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#d4af37;
+    color:#111;
+
+    font-size:30px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:0 10px 30px rgba(212,175,55,.35);
+}
+
+.suite-controls button:hover{
+
+    transform:translateY(-3px);
+
+    background:#fff;
+}
+.suite-controls{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.suite-controls .btn{
+
+    padding:16px 32px;
+    font-size:16px;
+}
