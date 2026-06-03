@@ -1354,3 +1354,207 @@ html {
     padding:16px 32px;
     font-size:16px;
 }
+/* ===================================
+   MOBILE RESPONSIVE DESIGN
+=================================== */
+
+@media screen and (max-width:768px){
+
+/* GENERAL */
+
+.section{
+    padding:70px 20px;
+}
+
+.section-title{
+    font-size:1.8rem;
+    letter-spacing:1px;
+}
+
+/* HERO */
+
+.hero{
+    height:80vh;
+}
+
+.hero-overlay h1{
+    font-size:2.4rem;
+}
+
+.tagline{
+    font-size:22px;
+}
+
+.hero-subtext{
+    font-size:15px;
+    line-height:1.7;
+    padding:0 10px;
+}
+
+/* BUTTONS */
+
+.btn{
+    width:100%;
+    max-width:280px;
+    margin:8px auto;
+    display:block;
+    text-align:center;
+}
+
+/* NAVBAR */
+
+.premium-nav{
+    padding:15px;
+}
+
+.nav-left,
+.nav-right{
+    gap:15px;
+}
+
+.premium-nav a{
+    font-size:13px;
+}
+
+/* HERO BANNERS */
+
+.suite-hero{
+    height:45vh;
+}
+
+.suite-hero-overlay{
+    padding:20px;
+    text-align:center;
+    align-items:center;
+}
+
+.suite-hero-overlay h1{
+    font-size:2.2rem;
+}
+
+.suite-hero-overlay p{
+    font-size:15px;
+}
+
+/* ROOM PAGES */
+
+.room-details h1{
+    font-size:2rem;
+}
+
+.room-price{
+    font-size:1.5rem;
+}
+
+.room-description{
+    font-size:15px;
+}
+
+.amenities li{
+    font-size:15px;
+}
+
+/* GALLERIES */
+
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.gallery-grid img{
+    width:100%;
+}
+
+/* VIDEOS */
+
+.video-grid{
+    grid-template-columns:1fr;
+}
+
+.room-video video{
+    width:100%;
+}
+
+/* SUITES GRID */
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.suite-card{
+    max-width:100%;
+}
+
+/* EXPLORE SECTION */
+
+.explore-wrapper{
+    grid-template-columns:1fr;
+}
+
+.explore-card{
+    min-height:auto;
+}
+
+.explore-card h3{
+    font-size:1.6rem;
+}
+
+.explore-card p{
+    font-size:14px;
+}
+
+/* SUITE SLIDER BUTTONS */
+
+.suite-controls{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.suite-controls button{
+    width:55px;
+    height:55px;
+    font-size:24px;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:60px 25px 20px;
+}
+
+.footer-container{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+}
+
+.footer-extra{
+    grid-template-columns:1fr;
+}
+
+.footer-column{
+    text-align:center;
+}
+
+.footer-logo{
+    margin:auto;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+    width:55px;
+    height:55px;
+    font-size:24px;
+}
+
+}
+@media screen and (max-width:768px){
+
+.explore-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+}
