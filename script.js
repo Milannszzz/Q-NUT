@@ -1,105 +1,88 @@
-const rooms = [
+const exploreSuites = [
 
 {
-title: "Single Room",
-price: "₦45,000 / Night",
+title:"Single Room",
+price:"₦45,000 / Night",
+image:"assets/images/single room.jpg",
+link:"single-room.html",
+
 description:
-"Comfortable accommodation ideal for short stays and business travellers.",
-image: "assets/images/single room.jpg",
-details: "single-room.html",
-book:
-"https://wa.me/2349169882866?text=Hi%20I%20want%20to%20book%20the%20Single%20Room"
+"Perfect for solo travellers and short stays, featuring a comfortable bed, air conditioning, Smart TV, complimentary WiFi and 24-hour room service."
 },
 
 {
-title: "Standard Room",
-price: "₦55,000 / Night",
+title:"Standard Room",
+price:"₦55,000 / Night",
+image:"assets/images/standard room.jpg",
+link:"standard-room.html",
+
 description:
-"Spacious and stylish room featuring premium comfort and modern amenities.",
-image: "assets/images/standard room.jpg",
-details: "standard-room.html",
-book:
-"https://wa.me/2349169882866?text=Hi%20I%20want%20to%20book%20the%20Standard%20Room"
+"Designed for guests seeking additional comfort and style, offering spacious interiors, premium furnishings and a relaxing atmosphere."
 },
 
 {
-title: "Studio Room",
-price: "₦60,000 / Night",
+title:"Studio Room",
+price:"₦60,000 / Night",
+image:"assets/images/studio room.jpg",
+link:"studio-room.html",
+
 description:
-"An elegant room experience with additional space and enhanced comfort.",
-image: "assets/images/studio room.jpg",
-details: "studio-room.html",
-book:
-"https://wa.me/2349169882866?text=Hi%20I%20want%20to%20book%20the%20Studio%20Room"
+"An elegant accommodation option with enhanced space, modern décor and premium hospitality ideal for both leisure and business travellers."
 },
 
 {
-title: "Premium Room",
-price: "₦70,000 / Night",
+title:"Premium Room",
+price:"₦70,000 / Night",
+image:"assets/images/premium room.jpg",
+link:"premium-room.html",
+
 description:
-"Our most luxurious accommodation experience with premium finishes and exclusive comfort.",
-image: "assets/images/premium room.jpg",
-details: "premium-room.html",
-book:
-"https://wa.me/2349169882866?text=Hi%20I%20want%20to%20book%20the%20Premium%20Room"
+"Our signature luxury experience featuring refined interiors, superior comfort and exclusive amenities for a memorable stay."
 }
 
 ];
 
-let currentRoom = 3;
+let exploreIndex = 3;
 
-function updateRoom(){
+function updateExploreSuite(){
 
-const img = document.getElementById("sliderImage");
+document.getElementById("exploreSuiteTitle").innerHTML =
+exploreSuites[exploreIndex].title;
 
-img.classList.add("fade");
+document.getElementById("exploreSuitePrice").innerHTML =
+exploreSuites[exploreIndex].price;
 
-setTimeout(() => {
+document.getElementById("exploreSuiteDescription").innerHTML =
+exploreSuites[exploreIndex].description;
 
-document.getElementById("sliderTitle").textContent =
-rooms[currentRoom].title;
+document.getElementById("exploreSuiteImage").src =
+exploreSuites[exploreIndex].image;
 
-document.getElementById("sliderPrice").textContent =
-rooms[currentRoom].price;
-
-document.getElementById("sliderDescription").textContent =
-rooms[currentRoom].description;
-
-document.getElementById("sliderImage").src =
-rooms[currentRoom].image;
-
-document.getElementById("sliderDetails").href =
-rooms[currentRoom].details;
-
-document.getElementById("sliderBook").href =
-rooms[currentRoom].book;
-
-img.classList.remove("fade");
-
-}, 250);
+document.getElementById("exploreSuiteLink").href =
+exploreSuites[exploreIndex].link;
 
 }
 
-function nextRoom(){
+function nextExploreSuite(){
 
-currentRoom++;
+exploreIndex++;
 
-if(currentRoom >= rooms.length){
-currentRoom = 0;
+if(exploreIndex >= exploreSuites.length){
+exploreIndex = 0;
 }
 
-updateRoom();
+updateExploreSuite();
 
 }
 
-function previousRoom(){
+function prevExploreSuite(){
 
-currentRoom--;
+exploreIndex--;
 
-if(currentRoom < 0){
-currentRoom = rooms.length - 1;
+if(exploreIndex < 0){
+exploreIndex = exploreSuites.length - 1;
 }
 
-updateRoom();
+updateExploreSuite();
 
 }
