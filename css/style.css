@@ -654,3 +654,20 @@ html {
   max-width:900px;
   border-radius:20px;
 }
+.suite-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.secondary-btn{
+  background:transparent;
+  border:1px solid #ff7a00;
+  color:#ff7a00 !important;
+}
+
+.secondary-btn:hover{
+  background:#ff7a00;
+  color:black !important;
+}
