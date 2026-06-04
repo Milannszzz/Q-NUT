@@ -1856,3 +1856,6 @@ html {
 .suites-feature img{
     height:100% !important;
 }
+.contact-hero{
+    background-image:url("../assets/images/contact-banner.jpg");
+}
