@@ -1558,10 +1558,12 @@ html {
 }
 
 }
-/* GALLERY FILTERS */
+/* =========================
+   GALLERY FILTERS
+========================= */
 
 .gallery-filter-section{
-    padding:60px 20px 20px;
+    padding:60px 20px 40px;
     text-align:center;
 }
 
@@ -1569,67 +1571,94 @@ html {
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
+    gap:15px;
 }
 
 .gallery-filters button{
     background:#111;
     color:#d4af37;
     border:1px solid #d4af37;
-    padding:10px 22px;
+    padding:12px 28px;
     border-radius:40px;
     cursor:pointer;
+    font-size:15px;
     transition:.3s;
 }
 
-.gallery-filters button:hover,
-.gallery-filters button.active{
+.gallery-filters button.active,
+.gallery-filters button:hover{
     background:#d4af37;
     color:#000;
 }
 
 
-/* MASONRY GRID */
+/* =========================
+   GALLERY GRID
+========================= */
 
-.gallery-masonry{
-    columns:4;
-    column-gap:15px;
-    padding:20px 5% 80px;
+.gallery-grid-modern{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding-bottom:80px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
 .gallery-item{
-    margin-bottom:15px;
-    break-inside:avoid;
+    overflow:hidden;
+    border-radius:15px;
+    background:#111;
 }
 
 .gallery-item img{
     width:100%;
-    border-radius:15px;
+    height:280px;
+    object-fit:cover;
     display:block;
     transition:.4s;
 }
 
-.gallery-item img:hover{
-    transform:scale(1.03);
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.gallery-grid-modern{
+    grid-template-columns:repeat(3,1fr);
+}
+
 }
 
 
 /* MOBILE */
 
-@media(max-width:1000px){
-    .gallery-masonry{
-        columns:3;
-    }
-}
-
 @media(max-width:768px){
-    .gallery-masonry{
-        columns:2;
-    }
+
+.gallery-grid-modern{
+    grid-template-columns:repeat(2,1fr);
 }
 
-@media(max-width:500px){
-    .gallery-masonry{
-        columns:1;
-    }
+.gallery-item img{
+    height:220px;
+}
+
+}
+
+@media(max-width:480px){
+
+.gallery-grid-modern{
+    grid-template-columns:1fr;
+}
+
+.gallery-item img{
+    height:250px;
+}
+
 }
