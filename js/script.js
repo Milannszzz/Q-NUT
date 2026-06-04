@@ -83,3 +83,4 @@ exploreIndex = exploreSuites.length - 1;
 updateExploreSuite();
 
 }
+updateExploreSuite();
