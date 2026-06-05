@@ -2882,7 +2882,7 @@ document.getElementById("cart-items-count");
     const cartTotal =
     document.getElementById("cart-total");
 
-    if(!cartItems || !cartCount || !cartTotal){
+    if(!cartItems || !cartCountTop || !cartTotal){
 
         return;
 
@@ -2893,7 +2893,7 @@ document.getElementById("cart-items-count");
         cartItems.innerHTML =
         '<p class="empty-cart">No items selected.</p>';
 
-        cartCount.innerText = "0";
+        cartCountTop.innerText = "0";
 
         cartTotal.innerText = "₦0";
 
