@@ -2822,10 +2822,9 @@
 <script>
   function toggleCart(){
 
-    const cart =
-    document.querySelector(".cart-box");
-
-    cart.classList.toggle("active");
+    document
+    .getElementById("cartBox")
+    .classList.toggle("active");
 
 }
   
@@ -2971,7 +2970,9 @@ document.getElementById("cart-items-count");
     const totalItems =
 cart.reduce((sum,item)=>sum + item.qty,0);
 
-cartCountTop.innerText = totalItems;
+document
+.getElementById("cart-count")
+.innerText = totalItems;
 
 if(cartCountHeader){
 
