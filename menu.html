@@ -62,7 +62,10 @@
         class="cart-btn"
         onclick="toggleCart()">
 
-        🛒 Cart (<span id="cart-count">0</span>)
+    <h3>
+        🛒 Your Order
+        <span id="cart-count">0</span>
+    </h3>
 
     </button>
 
@@ -2871,8 +2874,11 @@ function renderCart(){
     const cartItems =
     document.getElementById("cart-items");
 
-    const cartCount =
-    document.getElementById("cart-count");
+    const cartCountTop =
+document.getElementById("cart-count");
+
+const cartCountHeader =
+document.getElementById("cart-items-count");
 
     const cartTotal =
     document.getElementById("cart-total");
@@ -2942,8 +2948,17 @@ function renderCart(){
         `;
     });
 
-    cartCount.innerText =
-    cart.reduce((sum,item)=>sum + item.qty,0);
+    const totalItems =
+cart.reduce((sum,item)=>sum + item.qty,0);
+
+cartCountTop.innerText = totalItems;
+
+if(cartCountHeader){
+
+    cartCountHeader.innerText =
+    totalItems;
+
+}
 
     cartTotal.innerText =
     "₦" + total.toLocaleString();
