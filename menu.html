@@ -3006,15 +3006,30 @@ if(menuSearch){
             this.value.toLowerCase();
 
             document
-            .querySelectorAll(".menu-item")
-            .forEach(item=>{
+            .querySelectorAll(".menu-category")
+            .forEach(category=>{
 
-                item.style.display =
-                item.innerText
-                .toLowerCase()
-                .includes(value)
+                let found = false;
 
-                ? "flex"
+                category
+                .querySelectorAll(".menu-item")
+                .forEach(item=>{
+
+                    const match =
+                    item.innerText
+                    .toLowerCase()
+                    .includes(value);
+
+                    item.style.display =
+                    match ? "flex" : "none";
+
+                    if(match) found = true;
+
+                });
+
+                category.style.display =
+                found || value === ""
+                ? "block"
                 : "none";
 
             });
