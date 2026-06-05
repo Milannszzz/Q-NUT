@@ -2810,11 +2810,10 @@ function toggleCategory(header){
 
 let cart = [];
 
-function addToCart(name, price){
+function addToCart(name,price){
 
     const existing =
-    cart.find(
-    item => item.name === name);
+    cart.find(item => item.name === name);
 
     if(existing){
 
@@ -2830,158 +2829,172 @@ function addToCart(name, price){
 
     }
 
-    updateCart();
-
+    renderCart();
 }
-</script>
 
-  <script>
+function increase(index){
 
-function updateCart(){
+    cart[index].qty++;
+
+    renderCart();
+}
+
+function decrease(index){
+
+    cart[index].qty--;
+
+    if(cart[index].qty <= 0){
+
+        cart.splice(index,1);
+    }
+
+    renderCart();
+}
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    renderCart();
+}
+
+function renderCart(){
 
     const cartItems =
-    document.getElementById("cartItems");
+    document.getElementById("cart-items");
 
     const cartCount =
-    document.getElementById("cartCount");
+    document.getElementById("cart-count");
 
     const cartTotal =
-    document.getElementById("cartTotal");
+    document.getElementById("cart-total");
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML =
+        '<p class="empty-cart">No items selected.</p>';
+
+        cartCount.innerText = 0;
+
+        cartTotal.innerText = "₦0";
+
+        return;
+    }
+
+    let total = 0;
 
     cartItems.innerHTML = "";
 
-    let total = 0;
-    let count = 0;
+    cart.forEach((item,index)=>{
 
-    cart.forEach(item=>{
-
-        total +=
-        item.price * item.qty;
-
-        count += item.qty;
+        total += item.price * item.qty;
 
         cartItems.innerHTML += `
-
         <div class="cart-item">
 
             <div>
 
-                ${item.name}
+                <strong>${item.name}</strong>
 
                 <br>
 
-                <button
-                onclick="changeQty(
-                '${item.name}',
-                -1)">
-
-                -
-
-                </button>
-
-                ${item.qty}
-
-                <button
-                onclick="changeQty(
-                '${item.name}',
-                1)">
-
-                +
-
-                </button>
+                ₦${item.price.toLocaleString()}
 
             </div>
 
-            <div>
+            <div class="quantity-box">
 
-                ₦${(
-                item.price *
-                item.qty
-                ).toLocaleString()}
+                <button
+                class="qty-btn"
+                onclick="decrease(${index})">
+                -
+                </button>
+
+                <span>${item.qty}</span>
+
+                <button
+                class="qty-btn"
+                onclick="increase(${index})">
+                +
+                </button>
+
+                <button
+                class="remove-btn"
+                onclick="removeItem(${index})">
+
+                ×
+
+                </button>
 
             </div>
 
         </div>
-
         `;
-
     });
 
-    cartCount.textContent = count;
+    cartCount.innerText =
+    cart.reduce((a,b)=>a+b.qty,0);
 
-    cartTotal.textContent =
-    total.toLocaleString();
-
+    cartTotal.innerText =
+    "₦" + total.toLocaleString();
 }
-</script>
-
-  <script>
-
-function changeQty(name, amount){
-
-    const item =
-    cart.find(
-    i => i.name === name);
-
-    if(!item) return;
-
-    item.qty += amount;
-
-    if(item.qty <= 0){
-
-        cart =
-        cart.filter(
-        i => i.name !== name);
-
-    }
-
-    updateCart();
-
-}
-</script>
-
-  <script>
-
-function toggleCart(){
-
-    document
-    .getElementById("cartPanel")
-    .classList.toggle("active");
-
-}
-</script>
-
-  <script>
 
 function checkoutWhatsApp(){
 
+    if(cart.length === 0){
+
+        alert("Cart is empty");
+
+        return;
+    }
+
     let message =
-    "Hello Q-NUTS,%0A%0AI would like to order:%0A";
+    "Hello Q-NUTS,%0A%0A";
+
+    message +=
+    "ORDER REQUEST%0A%0A";
 
     let total = 0;
 
     cart.forEach(item=>{
 
+        total += item.price * item.qty;
+
         message +=
-        `• ${item.name} x${item.qty}%0A`;
-
-        total +=
-        item.price * item.qty;
-
+        ${item.name} x${item.qty}%0A;
     });
 
     message +=
-    `%0AEstimated Total: ₦${total.toLocaleString()}`;
+    %0ATotal: ₦${total.toLocaleString()};
 
     window.open(
-
-    `https://wa.me/2349169882866?text=${message}`,
-
+    https://wa.me/2349169882866?text=${message},
     "_blank"
-
     );
-
 }
+
+document
+.getElementById("menuSearch")
+.addEventListener("keyup",function(){
+
+    let value =
+    this.value.toLowerCase();
+
+    document
+    .querySelectorAll(".menu-item")
+    .forEach(item=>{
+
+        item.style.display =
+        item.innerText
+        .toLowerCase()
+        .includes(value)
+
+        ? "flex"
+        : "none";
+    });
+
+});
+
 </script>
   
 </body>
