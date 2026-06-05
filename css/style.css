@@ -2145,3 +2145,32 @@ html {
 
     color:#999;
 }
+.cart-box{
+
+    position:fixed;
+
+    right:-420px;
+
+    top:0;
+
+    width:400px;
+
+    height:100vh;
+
+    background:#111;
+
+    z-index:9999;
+
+    transition:.4s;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+    box-shadow:-5px 0 30px rgba(0,0,0,.5);
+}
+
+.cart-box.active{
+
+    right:0;
+}
