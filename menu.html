@@ -2804,13 +2804,11 @@ function toggleCategory(header){
     category.classList.toggle("active");
 
 }
-</script>
-
-  <script>
+<script>
 
 let cart = [];
 
-function addToCart(name,price){
+function addToCart(name, price){
 
     const existing =
     cart.find(item => item.name === name);
@@ -2822,9 +2820,9 @@ function addToCart(name,price){
     }else{
 
         cart.push({
-            name,
-            price,
-            qty:1
+            name: name,
+            price: price,
+            qty: 1
         });
 
     }
@@ -2846,6 +2844,7 @@ function decrease(index){
     if(cart[index].qty <= 0){
 
         cart.splice(index,1);
+
     }
 
     renderCart();
@@ -2869,12 +2868,18 @@ function renderCart(){
     const cartTotal =
     document.getElementById("cart-total");
 
+    if(!cartItems || !cartCount || !cartTotal){
+
+        return;
+
+    }
+
     if(cart.length === 0){
 
         cartItems.innerHTML =
         '<p class="empty-cart">No items selected.</p>';
 
-        cartCount.innerText = 0;
+        cartCount.innerText = "0";
 
         cartTotal.innerText = "₦0";
 
@@ -2894,9 +2899,7 @@ function renderCart(){
 
             <div>
 
-                <strong>${item.name}</strong>
-
-                <br>
+                <strong>${item.name}</strong><br>
 
                 ₦${item.price.toLocaleString()}
 
@@ -2921,9 +2924,7 @@ function renderCart(){
                 <button
                 class="remove-btn"
                 onclick="removeItem(${index})">
-
                 ×
-
                 </button>
 
             </div>
@@ -2933,7 +2934,7 @@ function renderCart(){
     });
 
     cartCount.innerText =
-    cart.reduce((a,b)=>a+b.qty,0);
+    cart.reduce((sum,item)=>sum + item.qty,0);
 
     cartTotal.innerText =
     "₦" + total.toLocaleString();
@@ -2969,27 +2970,37 @@ function checkoutWhatsApp(){
     );
 }
 
-document
-.getElementById("menuSearch")
-.addEventListener("keyup",function(){
+const menuSearch =
+document.getElementById("menuSearch");
 
-    let value =
-    this.value.toLowerCase();
+if(menuSearch){
 
-    document
-    .querySelectorAll(".menu-item")
-    .forEach(item=>{
+    menuSearch.addEventListener(
+        "keyup",
+        function(){
 
-        item.style.display =
-        item.innerText
-        .toLowerCase()
-        .includes(value)
+            const value =
+            this.value.toLowerCase();
 
-        ? "flex"
-        : "none";
-    });
+            document
+            .querySelectorAll(".menu-item")
+            .forEach(item=>{
 
-});
+                item.style.display =
+                item.innerText
+                .toLowerCase()
+                .includes(value)
+
+                ? "flex"
+                : "none";
+
+            });
+
+        }
+    );
+}
+
+renderCart();
 
 </script>
   
