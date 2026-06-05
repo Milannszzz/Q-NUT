@@ -2210,3 +2210,26 @@ html {
 
     transform:translateX(0);
 }
+.cart-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.close-cart{
+
+    background:none;
+
+    border:none;
+
+    color:#d4af37;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
