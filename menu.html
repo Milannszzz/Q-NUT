@@ -2981,14 +2981,14 @@ function checkoutWhatsApp(){
 
         total += item.price * item.qty;
 
-        message += ${item.name} x${item.qty}%0A;
+        message += `${item.name} x${item.qty}%0A`;
 
     });
 
-    message += %0A💰 Total: ₦${total.toLocaleString()};
+    message += `%0A💰 Total: ₦${total.toLocaleString()}`;
 
     window.open(
-        https://wa.me/2349169882866?text=${message},
+        `https://wa.me/2349169882866?text=${message}`,
         "_blank"
     );
 }
