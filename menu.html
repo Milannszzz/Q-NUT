@@ -3002,43 +3002,34 @@ function checkoutWhatsApp(){
 
     if(cart.length === 0){
 
-        alert("Your cart is empty.");
+        alert("Cart is empty");
 
         return;
-
     }
+
+    let message =
+    "Hello Q-NUTS,%0A%0A";
+
+    message +=
+    "ORDER REQUEST%0A%0A";
 
     let total = 0;
 
-    let message =
-`Q-NUTS LOUNGE & SUITES
-
-ORDER REQUEST
-
-`;
-
-    cart.forEach(item => {
+    cart.forEach(item=>{
 
         total += item.price * item.qty;
 
         message +=
-`${item.name}
-Qty: ${item.qty}
-Price: ₦${item.price.toLocaleString()}
-
-`;
-
+        ${item.name} x${item.qty}%0A;
     });
 
     message +=
-TOTAL: ₦${total.toLocaleString()};
+    `%0ATotal: ₦${total.toLocaleString()}`;
 
-    const url =
-    "https://wa.me/2349169882866?text=" +
-    encodeURIComponent(message);
-
-    window.open(url, "_blank");
-
+    window.open(
+    `https://wa.me/2349169882866?text=${message}`,
+    "_blank"
+    );
 }
 
 const menuSearch =
