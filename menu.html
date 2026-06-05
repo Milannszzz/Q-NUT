@@ -51,10 +51,10 @@
 
     <div class="menu-search">
 
-        <input
-            type="text"
-            id="menuSearch"
-            placeholder="Search food, drinks, cocktails...">
+    <input
+    type="text"
+    id="menuSearch"
+    placeholder="Search menu...">
 
     </div>
 
@@ -67,26 +67,41 @@
     </button>
 
 </section>
-  <div class="cart-panel" id="cartPanel">
+  <div class="cart-box">
 
-    <h2>Your Order</h2>
+    <h3>
+        🛒 Your Order
+        <span id="cart-count">0</span>
+    </h3>
 
-    <div id="cartItems"></div>
+    <div id="cart-items">
 
-    <div class="cart-total">
-
-        Total:
-        ₦<span id="cartTotal">0</span>
+        <p class="empty-cart">
+            No items selected.
+        </p>
 
     </div>
 
-    <button
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            Total:
+            <span id="cart-total">
+                ₦0
+            </span>
+
+        </div>
+
+        <button
         class="checkout-btn"
         onclick="checkoutWhatsApp()">
 
-        Order via WhatsApp
+            Order via WhatsApp
 
-    </button>
+        </button>
+
+    </div>
 
 </div>
 <section class="section">
