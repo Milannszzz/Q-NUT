@@ -2174,3 +2174,39 @@ html {
 
     right:0;
 }
+.cart-box{
+
+    position:fixed;
+
+    right:20px;
+
+    top:100px;
+
+    width:350px;
+
+    max-height:75vh;
+
+    overflow-y:auto;
+
+    background:#111;
+
+    border:1px solid #d4af37;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:
+    0 0 40px rgba(212,175,55,.25);
+
+    z-index:9999;
+
+    transform:translateX(120%);
+
+    transition:.4s ease;
+}
+
+.cart-box.active{
+
+    transform:translateX(0);
+}
