@@ -2949,10 +2949,7 @@ function checkoutWhatsApp(){
     }
 
     let message =
-    "Hello Q-NUTS,%0A%0A";
-
-    message +=
-    "ORDER REQUEST%0A%0A";
+    "Hello Q-NUTS,%0A%0AORDER REQUEST%0A%0A";
 
     let total = 0;
 
@@ -2960,16 +2957,15 @@ function checkoutWhatsApp(){
 
         total += item.price * item.qty;
 
-        message +=
-        ${item.name} x${item.qty}%0A;
+        message += ${item.name} x${item.qty}%0A;
+
     });
 
-    message +=
-    %0ATotal: ₦${total.toLocaleString()};
+    message += %0A💰 Total: ₦${total.toLocaleString()};
 
     window.open(
-    https://wa.me/2349169882866?text=${message},
-    "_blank"
+        https://wa.me/2349169882866?text=${message},
+        "_blank"
     );
 }
 
