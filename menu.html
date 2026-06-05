@@ -70,31 +70,36 @@
     </button>
 
 </section>
-  <div class="cart-box">
-  <div class="cart-top">
+  <div class="cart-toggle" onclick="toggleCart()">
 
-    <h3>
-        🛒 Your Order
-    </h3>
+    🛒
 
-    <button
+    <span id="cart-count">0</span>
+
+</div>
+
+<div class="cart-box" id="cartBox">
+
+    <div class="cart-header">
+
+        <h3>🛒 Your Order</h3>
+
+        <button
         class="close-cart"
         onclick="toggleCart()">
 
-        ✕
+            ✕
 
-    </button>
+        </button>
 
-  </div>
-    <h3>
-        🛒 Your Order
-        <span id="cart-count">0</span>
-    </h3>
+    </div>
 
     <div id="cart-items">
 
         <p class="empty-cart">
-            No items selected.
+
+            🍽️ Your cart is empty
+
         </p>
 
     </div>
@@ -105,7 +110,9 @@
 
             Total:
             <span id="cart-total">
+
                 ₦0
+
             </span>
 
         </div>
