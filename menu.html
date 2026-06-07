@@ -2882,7 +2882,19 @@ function toggleCategory(header){
 
 }
 
-let cart = [];
+let cart =
+JSON.parse(
+localStorage.getItem("qnutsCart")
+) || [];
+
+function saveCart(){
+
+    localStorage.setItem(
+        "qnutsCart",
+        JSON.stringify(cart)
+    );
+
+} 
 
 function addToCart(name, price){
 
@@ -2903,6 +2915,7 @@ function addToCart(name, price){
 
     }
 
+    saveCart();
     renderCart();
 }
 
@@ -2910,7 +2923,8 @@ function increase(index){
 
     cart[index].qty++;
 
-    renderCart();
+    saveCart();
+    renderCart()
 }
 
 function decrease(index){
@@ -2923,6 +2937,7 @@ function decrease(index){
 
     }
 
+    saveCart();
     renderCart();
 }
 
@@ -2930,6 +2945,7 @@ function removeItem(index){
 
     cart.splice(index,1);
 
+    saveCart();
     renderCart();
 }
 
@@ -2969,6 +2985,8 @@ document.getElementById("cart-items-count");
      }
 
     cartTotal.innerText = "₦0";
+
+      saveCart();
 
         return;
     }
