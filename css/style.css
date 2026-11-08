@@ -2422,3 +2422,84 @@ html {
     }
 
 }
+
+/* LUXURY AMENITIES */
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.amenity-card {
+    background: #111;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 170px;
+}
+
+.amenity-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
+}
+
+.amenity-card .amenity-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.amenity-card h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* TABLET */
+
+@media screen and (max-width: 900px) {
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 500px) {
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .amenity-card {
+        padding: 22px 12px;
+        min-height: 155px;
+        border-radius: 12px;
+    }
+
+    .amenity-card .amenity-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .amenity-card h3 {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+}
