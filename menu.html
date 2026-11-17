@@ -3731,37 +3731,24 @@ if(floatingBadge){
     "₦" + total.toLocaleString();
 }
 
-function checkoutWhatsApp(){
-
-    if(cart.length === 0){
-
-        alert("Cart is empty");
-
+function checkoutWhatsApp() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
         return;
     }
 
-    let message =
-    "Hello Q-NUTS,%0A%0A";
+    let message = "Hello Q-NUTS,\n\n";
+    message += "ORDER REQUEST\n\n";
 
-    message +=
-    "ORDER REQUEST%0A%0A";
-
-    let total = 0;
-
-    cart.forEach(item=>{
-
-        total += item.price * item.qty;
-
-        message +=
-        `${item.name} x${item.qty}%0A`;
+    cart.forEach(item => {
+        message += `${item.name} x${item.qty}\n`;
     });
 
-    message +=
-    `%0ATotal: ₦${total.toLocaleString()}`;
+    message += "\nPlease confirm my order. Thank you.";
 
     window.open(
-    `https://wa.me/2349169882866?text=${message}`,
-    "_blank"
+        `https://wa.me/2349169882866?text=${encodeURIComponent(message)}`,
+        "_blank"
     );
 }
 
