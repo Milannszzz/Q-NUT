@@ -2630,3 +2630,102 @@ html {
         letter-spacing: 0;
     }
 }
+
+
+/* ==========================================
+   Q-NUTS - PREMIUM BANNER TEXT IMPROVEMENT
+   Applies across all main website banners
+========================================== */
+
+/* GENERAL PAGE BANNERS */
+
+.page-hero {
+    isolation: isolate;
+}
+
+/* Dark overlay for better text visibility */
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.45)
+    );
+    z-index: 1;
+}
+
+/* PAGE BANNER HEADINGS */
+
+.page-hero-content h1 {
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.85);
+    letter-spacing: 1.5px;
+}
+
+/* PAGE BANNER SUBTITLES */
+
+.page-hero-content p {
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* HOME PAGE HERO */
+
+.hero-overlay h1,
+.hero-overlay h2 {
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+.hero-overlay p,
+.hero-overlay .hero-subtext {
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* SUITES HERO */
+
+.suite-hero-overlay {
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.suite-hero-overlay h1 {
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+.suite-hero-overlay p {
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* MOBILE BANNER TEXT */
+
+@media screen and (max-width: 768px) {
+
+    .page-hero-content h1 {
+        font-weight: 800;
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .page-hero-content p {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .hero-overlay h1,
+    .hero-overlay h2 {
+        font-weight: 800;
+    }
+
+}
