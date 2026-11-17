@@ -2622,3 +2622,11 @@ html {
         font-size: 11px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contact-hero h1 {
+        white-space: nowrap;
+        font-size: clamp(1.2rem, 5.8vw, 1.8rem);
+        letter-spacing: 0;
+    }
+}
